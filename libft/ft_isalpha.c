@@ -5,26 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 08:37:30 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/20 05:42:10 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/20 05:33:21 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/20 05:40:05 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
+#include <ctype.h>
+#include <stdio.h>
 
-/*
- * ft_isalpha - checks if an unsigned char passed in is an alphabetic character
- *
- * params
- * 		int	c - the unsigned char to be tested
- * 
- * returns
- * 		1 - if c is alphabetic
- * 		0 - otherwise
- */
-int	ft_isalpha(int c)
+int	main(void)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	printf("Testing ft_isalpha with c = 'z'...\n");
+	printf("isalpha output:\t\t%d\n", isalpha('z'));
+	printf("ft_isalpha output:\t%d\n", ft_isalpha('z'));
 }
