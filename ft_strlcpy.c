@@ -6,7 +6,7 @@
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 13:54:56 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 13:54:56 by weyap            ###   ########.fr       */
+/*   Updated: 2025/05/20 05:27:50 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int	index;
+	size_t	index;
 
 	index = 0;
 	while (index < size - 1 && src[index])

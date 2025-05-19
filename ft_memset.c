@@ -6,7 +6,7 @@
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 10:41:09 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 10:41:09 by weyap            ###   ########.fr       */
+/*   Updated: 2025/05/20 05:27:34 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	t_s = (char *) s;
 	while (n--)
-		*s++ = c;
+		*t_s++ = c;
 	return (s);
 }
