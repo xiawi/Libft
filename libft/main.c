@@ -24,7 +24,7 @@ int	main(void)
 	printf("\n");
 	getchar();
 
-	printf("Testing ft_isprint...");
+	printf("Testing ft_isprint...\n");
 	ft_is_test(isprint, ft_isprint, 4, is_tests);
 	printf("\n");
 	getchar();

@@ -1,1 +1,11 @@
-- [ ] strlcat
+# rework
+- [ ] ft_calloc
+- [ ] ft_memchr
+- [ ] ft_memcmp
+- [ ] ft_strdup
+- [ ] ft_strlcat
+- [ ] ft_strlcpy
+- [ ] ft_strchr
+- [ ] ft_strrchr
+- [ ] ft_strncmp
+- [ ] ft_memccpy
