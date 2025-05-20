@@ -1,22 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/20 05:33:21 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/20 05:40:05 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/20 08:01:04 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/20 08:01:04 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
-#include <ctype.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	main(void)
+/*
+ * ft_toupper - convert character to uppercase
+ *
+ * params
+ * 		int	c - the unsigned char to be converted
+ *
+ * return
+ * 		if an uppercase representation exists, return the transformed c,
+ * 		otherwise just return c.
+ */
+int	ft_toupper(int c)
 {
-	printf("Testing ft_isalpha with c = 'z'...\n");
-	printf("isalpha output:\t\t%d\n", isalpha('z'));
-	printf("ft_isalpha output:\t%d\n", ft_isalpha('z'));
+	if (c >= 'a' && c <= 'z')
+		c -= 32;
+	return (c);
 }

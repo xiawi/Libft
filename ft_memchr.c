@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 10:41:09 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/20 05:27:34 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/20 09:02:46 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/20 09:02:46 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_memset - fill memory with a constant byte
+ * ft_memchr - scan memory for a character
  *
  * params
- * 		s - the memory area to be filled
- * 		c - the constant byte to fill s with
- * 		n - number of bytes in memory area pointed to by s to be filled with c
+ * 		s - the memory area to be scanned
+ * 		c - the character to be searched
+ * 		n - the number of bytes to search
  *
  * variables
- * 		t_s - char pointer casted s
+ * 		t_s - the unsigned char pointer casted copy of s
  *
  * return
- * 		s after memory area has been filled
+ *		address of first occurrence of c if found, otherwise NULL.
  *
- * notes
- * 		iterate through the first n bytes of s, setting the value at that index
- * 		to be c.
  */
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*t_s;
+	const unsigned char	*t_s;
+	unsigned char		t_c;
 
-	t_s = (unsigned char *) s;
+	t_s = (unsigned char *)s;
+	t_c = (unsigned char)c;
 	while (n--)
-		*t_s++ = c;
-	return (s);
+		if (*t_s++ == t_c)
+			return ((void *)t_s);
+	return (NULL);
 }

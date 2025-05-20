@@ -28,7 +28,7 @@
  * 		the edited dest
  *
  * notes
- * 		if dest and src address are the same, or if size = 0, simply return
+ * 		if dest and src address are the same, or if n = 0, simply return
  * 		dest.
  *		increments through n bytes of dest, copying the corresponding byte
  *		from src.

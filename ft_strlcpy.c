@@ -23,11 +23,11 @@
  * variables
  * 		index - a number corresponding to the index of the dst and src arrays
  *
+ * function calls
+ * 		ft_strlen - to get the length of src
+ *
  * return
  * 		the length of the string the function tried to create (length of src)
- *
- * notes
- * 		copies src to dest up to size - 1.
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
