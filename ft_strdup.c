@@ -12,15 +12,33 @@
 
 #include "libft.h"
 
+/*
+ * ft_strdup - duplicate a string
+ *
+ * params
+ * 		s - the string to duplicate
+ *
+ * variables
+ * 		index - number corresponding to a character's index in copy
+ * 		copy - the duplicated string
+ *
+ * function calls
+ * 		ft_strlen - calculates the length of s
+ *
+ * return
+ * 		copy
+ */
 char	*ft_strdup(const char *s)
 {
-	char	*copy;
 	int		index;
+	char	*copy;
 
-	copy = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	index = 0;
-	while (s[index++])
-		copy[index] = s[index];
+	copy = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!copy)
+		return (NULL);
+	while (*s)
+		copy[index++] = *s++;
 	copy[index] = 0;
 	return (copy);
 }

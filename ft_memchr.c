@@ -22,6 +22,7 @@
  *
  * variables
  * 		t_s - the unsigned char pointer casted copy of s
+ * 		t_c - the unsigned char casted copy of c
  *
  * return
  *		address of first occurrence of c if found, otherwise NULL.
@@ -35,7 +36,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	t_s = (unsigned char *)s;
 	t_c = (unsigned char)c;
 	while (n--)
-		if (*t_s++ == t_c)
+	{
+		if (*t_s == t_c)
 			return ((void *)t_s);
+		t_s++;
+	}
 	return (NULL);
 }

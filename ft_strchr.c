@@ -20,6 +20,8 @@
  * 		c - the character to be located
  *
  * variables
+ * 		index - the number corresponding to an index in c
+ * 		s_len - length of s
  *		t_c - an unsigned char casted copy of c
  *
  * return
@@ -28,11 +30,18 @@
  */
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	t_c;
+	size_t	index;
+	size_t	s_len;
+	char	t_c;
 
-	t_c = (unsigned char) c;
-	while (*s++)
-		if (*s == t_c)
-			return ((char *) s);
-	return ((char *) s);
+	index = 0;
+	s_len = ft_strlen(s);
+	t_c = (char)c;
+	while (index <= s_len)
+	{
+		if (s[index] == t_c)
+			return ((char *)&s[index]);
+		index++;
+	}
+	return (NULL);
 }

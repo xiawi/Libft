@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2025/05/21 07:52:16 by weyap             #+#    #+#              #
+#    Updated: 2025/05/21 07:52:16 by weyap            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 CC=cc
 CFLAGS=-Wall -Wextra -Werror -c
 
@@ -28,3 +40,5 @@ fclean: clean
 
 re: fclean all
 	@echo "successfully recreated libft."
+
+.PHONY: all clean fclean re

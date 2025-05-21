@@ -12,20 +12,41 @@
 
 #include "libft.h"
 
+/*
+ * ft_strnstr - locate a substring in a string
+ *
+ * params
+ * 		big - the string to be searched
+ * 		little - the substring to find
+ * 		len - the length of characters to be searched
+ *
+ * variables
+ * 		big_size - length of big
+ * 		little_size - size of little
+ * 		index - number corresponding to a character's index in big
+ *
+ * function call
+ * 		ft_strlen - gets lengths of big and little
+ * 		ft_strncmp - to check if little is found in big
+ *
+ * return
+ * 		a pointer to the first occurrence of little in big if available,
+ * 		otherwise return NULL.
+ */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
+	size_t	big_size;
 	size_t	little_size;
-	size_t	little_index;
 	size_t	index;
 
+	big_size = ft_strlen(big);
 	little_size = ft_strlen(little);
 	index = 0;
-	while (index + little_size <= len)
+	if (!*little)
+		return ((char *)big);
+	while (index + little_size <= len && big[index])
 	{
-		little_index = 0;
-		while (big[index + little_index] == little[little_index])
-			little_index++;
-		if (little_index == little_size)
+		if (!ft_strncmp(&big[index], little, little_size))
 			return ((char *)&big[index]);
 		index++;
 	}

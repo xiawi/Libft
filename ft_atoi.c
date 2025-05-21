@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+ * ft_atoi - convert a string to an integer
+ *
+ * params
+ * 		nptr - the string to be converted
+ *
+ * variables
+ * 		mult - multiplier that can either be 1 or -1 (if there is a - sign)
+ * 		val - the value of the integer
+ *
+ * function calls
+ * 		ft_isdigit - check if a character is a digit
+ *
+ * return
+ * 		the converted integer
+ */
 int	ft_atoi(const char *nptr)
 {
 	char	mult;

@@ -24,7 +24,7 @@
  * 		t_s - char pointer casted s
  *
  * return
- * 		s after memory area has been filled
+ * 		s after memory area has been filled, or if s is NULL, return NULL.
  *
  * notes
  * 		iterate through the first n bytes of s, setting the value at that index

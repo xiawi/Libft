@@ -23,7 +23,7 @@
  * 		0 - otherwise
  *
  * notes
- * 	ASCII code 0 - 31 and 127 are non-printable. 
+ * 		ASCII code 0 - 31 and 127 are non-printable. 
  */
 int	ft_isprint(int c)
 {
