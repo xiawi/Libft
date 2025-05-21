@@ -6,7 +6,7 @@
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 10:25:42 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/20 10:25:42 by weyap            ###   ########.fr       */
+/*   Updated: 2025/05/21 17:33:20 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,9 @@
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	big_size;
 	size_t	little_size;
 	size_t	index;
 
-	big_size = ft_strlen(big);
 	little_size = ft_strlen(little);
 	index = 0;
 	if (!*little)
