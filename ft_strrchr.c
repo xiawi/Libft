@@ -13,24 +13,19 @@
 #include "libft.h"
 
 /*
- * ft_strrchr - locate the last occurrence of character in string
+ *	ft_strrchr - locate the last occurrence of character in string
  *
- * params
+ *	params
  * 		s - the string to be searched
  * 		c - the character to be located
  *
- * variables
+ *	variables
  * 		index - a number corresponding to the index of a character in s
  * 		t_c - a char casted copy of c
  *
- * return
+ *	return
  * 		address of the last occurrence of c in s if found, otherwise s'
  * 		terminating null byte.
- *
- * notes
- * 		latest is set to -1 as that is outside the bounds of search.
- * 		the whole string is looped through once, with latest being updated
- * 		whenever c is found.
  */
 char	*ft_strrchr(const char *s, int c)
 {

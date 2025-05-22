@@ -13,19 +13,19 @@
 #include "libft.h"
 
 /*
- * ft_strdup - duplicate a string
+ *	ft_strdup - duplicate a string
  *
- * params
+ *	params
  * 		s - the string to duplicate
  *
- * variables
+ *	variables
  * 		index - number corresponding to a character's index in copy
  * 		copy - the duplicated string
  *
- * function calls
+ *	function calls
  * 		ft_strlen - calculates the length of s
  *
- * return
+ *	return
  * 		copy
  */
 char	*ft_strdup(const char *s)

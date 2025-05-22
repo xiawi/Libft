@@ -13,12 +13,12 @@
 #include "libft.h"
 
 /*
- * ft_isdigit - checks if an unsigned char passed in is a digit
+ *	ft_isdigit - checks if an unsigned char passed in is a digit
  *
- * params
+ *	params
  * 		int	c - the unsigned char to be tested
  * 
- * returns
+ *	returns
  * 		1 - if c is a digit
  * 		0 - otherwise
  */

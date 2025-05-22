@@ -13,20 +13,20 @@
 #include "libft.h"
 
 /*
- * ft_memset - fill memory with a constant byte
+ *	ft_memset - fill memory with a constant byte
  *
- * params
+ *	params
  * 		s - the memory area to be filled
  * 		c - the constant byte to fill s with
  * 		n - number of bytes in memory area pointed to by s to be filled with c
  *
- * variables
+ *	variables
  * 		t_s - char pointer casted s
  *
- * return
+ *	return
  * 		s after memory area has been filled, or if s is NULL, return NULL.
  *
- * notes
+ *	notes
  * 		iterate through the first n bytes of s, setting the value at that index
  * 		to be c.
  */

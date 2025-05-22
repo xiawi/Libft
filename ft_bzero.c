@@ -13,14 +13,14 @@
 #include "libft.h"
 
 /*
- * ft_bzero - zero a byte string
+ *	ft_bzero - zero a byte string
  *
- * params
+ *	params
  * 		s - the memory area to be zero-ed
  * 		n - number of bytes in memory area pointed to by s to be filled with 
  * 			'\0'
  *
- * function calls
+ *	function calls
  * 		ft_memset - fills n bytes in s with '\0'
  */
 void	ft_bzero(void *s, size_t n)

@@ -13,12 +13,12 @@
 #include "libft.h"
 
 /*
- * ft_toupper - convert character to uppercase
+ *	ft_toupper - convert character to uppercase
  *
- * params
+ *	params
  * 		int	c - the unsigned char to be converted
  *
- * return
+ *	return
  * 		if an uppercase representation exists, return the transformed c,
  * 		otherwise just return c.
  */

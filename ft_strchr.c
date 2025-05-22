@@ -13,18 +13,18 @@
 #include "libft.h"
 
 /*
- * ft_strchr - locate first occurrence of character in string
+ *	ft_strchr - locate first occurrence of character in string
  *
- * params
+ *	params
  * 		s - the string to be searched
  * 		c - the character to be located
  *
- * variables
+ *	variables
  * 		index - the number corresponding to an index in c
  * 		s_len - length of s
  *		t_c - an unsigned char casted copy of c
  *
- * return
+ *	return
  * 		address of the first occurrence of c in s if found, otherwise s'
  * 		terminating null byte.
  */

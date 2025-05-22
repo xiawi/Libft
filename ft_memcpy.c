@@ -13,21 +13,21 @@
 #include "libft.h"
 
 /*
- * ft_memcpy - copy memory area
+ *	ft_memcpy - copy memory area
  *
- * params
+ *	params
  * 		dest - the memory address to be copied to
  * 		src - the memory address to be copied from
  * 		n - number of bytes to copy from src to dest
  *
- * variables
+ *	variables
  * 		t_dest - char pointer casted copy of dest
  * 		t_src - char pointer casted copy of src
  *
- * return
+ *	return
  * 		the edited dest
  *
- * notes
+ *	notes
  * 		if dest and src address are the same, or if n = 0, simply return
  * 		dest.
  *		increments through n bytes of dest, copying the corresponding byte

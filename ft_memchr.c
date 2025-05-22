@@ -13,18 +13,18 @@
 #include "libft.h"
 
 /*
- * ft_memchr - scan memory for a character
+ *	ft_memchr - scan memory for a character
  *
- * params
+ *	params
  * 		s - the memory area to be scanned
  * 		c - the character to be searched
  * 		n - the number of bytes to search
  *
- * variables
+ *	variables
  * 		t_s - the unsigned char pointer casted copy of s
  * 		t_c - the unsigned char casted copy of c
  *
- * return
+ *	return
  *		address of first occurrence of c if found, otherwise NULL.
  *
  */

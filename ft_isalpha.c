@@ -13,12 +13,12 @@
 #include "libft.h"
 
 /*
- * ft_isalpha - checks if an unsigned char passed in is an alphabetic character
+ *	ft_isalpha - checks if an unsigned char passed in is an alphabetic character
  *
- * params
+ *	params
  * 		int	c - the unsigned char to be tested
  * 
- * returns
+ *	returns
  * 		1 - if c is alphabetic
  * 		0 - otherwise
  */

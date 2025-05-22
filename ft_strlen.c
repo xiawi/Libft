@@ -13,18 +13,18 @@
 #include "libft.h"
 
 /*
- * ft_strlen - calculates the length of a string
+ *	ft_strlen - calculates the length of a string
  *
- * params
+ *	params
  * 		s - the string that we want to calculate the length of
  *
- * variables
+ *	variables
  * 		len - the length calculated
  *
- * return
+ *	return
  * 		len
  *
- * notes
+ *	notes
  * 		we iterate through string until we reach NULL (\0), incrementing len
  * 		at each iteration.
  *

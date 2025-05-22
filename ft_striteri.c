@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:42:52 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 09:42:52 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/22 18:18:37 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/22 18:18:37 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
- *	ft_isprint - checks if an unsigned char passed is printable
- *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is printable
- * 		0 - otherwise
- *
- *	notes
- * 		ASCII code 0 - 31 and 127 are non-printable. 
- */
-int	ft_isprint(int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	int	index;
+
+	if (!s)
+		return ;
+	index = 0;
+	while (s[index])
+	{
+		f(index, &s[index]);
+		index++;
+	}
 }

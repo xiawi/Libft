@@ -6,30 +6,29 @@
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/20 10:25:42 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/21 17:33:20 by weyap            ###   ########.fr       */
+/*   Updated: 2025/05/20 10:25:42 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- * ft_strnstr - locate a substring in a string
+ *	ft_strnstr - locate a substring in a string
  *
- * params
+ *	params
  * 		big - the string to be searched
  * 		little - the substring to find
  * 		len - the length of characters to be searched
  *
- * variables
- * 		big_size - length of big
+ *	variables
  * 		little_size - size of little
  * 		index - number corresponding to a character's index in big
  *
- * function call
+ *	function call
  * 		ft_strlen - gets lengths of big and little
  * 		ft_strncmp - to check if little is found in big
  *
- * return
+ *	return
  * 		a pointer to the first occurrence of little in big if available,
  * 		otherwise return NULL.
  */

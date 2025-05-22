@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:42:52 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 09:42:52 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/22 08:57:06 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/22 08:57:06 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
- *	ft_isprint - checks if an unsigned char passed is printable
- *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is printable
- * 		0 - otherwise
- *
- *	notes
- * 		ASCII code 0 - 31 and 127 are non-printable. 
- */
-int	ft_isprint(int c)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	unsigned int	start;
+	size_t			len;
+
+	start = 0;
+	while (ft_strchr(set, s1[start]))
+		start++;
+	len = ft_strlen(s1) - start;
+	while (ft_strchr(set, s1[start + len - 1]))
+		len--;
+	return (ft_substr(s1, start, len));
 }

@@ -13,13 +13,13 @@
 #include "libft.h"
 
 /*
- * ft_isascii - checks if an unsigned char passed in fits into the ASCII 
- * character set
+ *	ft_isascii - checks if an unsigned char passed in fits into the ASCII 
+ * 				 character set
  *
- * params
+ *	params
  * 		int	c - the unsigned char to be tested
  * 
- * returns
+ *	returns
  * 		1 - if c fits into the ASCII character set
  * 		0 - otherwise
  *

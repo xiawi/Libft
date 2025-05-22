@@ -13,12 +13,12 @@
 #include "libft.h"
 
 /*
- * ft_tolower - convert character to lowercase
+ *	ft_tolower - convert character to lowercase
  *
- * params
+ *	params
  * 		int	c - the unsigned char to be converted
  *
- * return
+ *	return
  * 		if a lowercase representation exists, return the transformed c,
  * 		otherwise just return c.
  */

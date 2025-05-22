@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/19 09:42:52 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 09:42:52 by weyap            ###   ########.fr       */
+/*   Created: 2025/05/22 07:56:55 by weyap             #+#    #+#             */
+/*   Updated: 2025/05/22 07:56:55 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
- *	ft_isprint - checks if an unsigned char passed is printable
- *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is printable
- * 		0 - otherwise
- *
- *	notes
- * 		ASCII code 0 - 31 and 127 are non-printable. 
- */
-int	ft_isprint(int c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	size_t	size;
+	char	*str;
+
+	size = ft_strlen(s1) + ft_strlen(s2) + 1;
+	str = (char *)malloc(sizeof(char) * size);
+	if (str)
+	{
+		ft_strlcpy(str, s1, size);
+		ft_strlcat(str, s2, size);
+	}
+	return (str);
 }

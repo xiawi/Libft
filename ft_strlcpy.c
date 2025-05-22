@@ -13,20 +13,20 @@
 #include "libft.h"
 
 /*
- * ft_strlcpy - size-bounded string copying
+ *	ft_strlcpy - size-bounded string copying
  *
- * params
+ *	params
  * 		dst - the string buffer to be copied to
  * 		src - the string to be copied from
  * 		size - size of the buffer
  *
- * variables
+ *	variables
  * 		index - a number corresponding to the index of the dst and src arrays
  *
- * function calls
+ *	function calls
  * 		ft_strlen - to get the length of src
  *
- * return
+ *	return
  * 		the length of the string the function tried to create (length of src)
  */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)

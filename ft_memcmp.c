@@ -13,16 +13,16 @@
 #include "libft.h"
 
 /*
- * ft_memcmp - compare two memory areas
+ *	ft_memcmp - compare two memory areas
  *
- * params
+ *	params
  * 		s1, s2 - the two areas to be compared
  *		n - the number of bytes to check for comparison
  *
- * variables
+ *	variables
  * 		t_s1, t_s2 - the unsigned char pointer casted copies of s1 and s2
  *
- * return
+ *	return
  * 		if a difference is found, the difference between the two bytes in
  * 		memory, otherwise return 0.
  */

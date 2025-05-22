@@ -13,21 +13,21 @@
 #include "libft.h"
 
 /*
- * ft_memmove - copy memory area (safer than ft_memcpy)
+ *	ft_memmove - copy memory area (safer than ft_memcpy)
  *
- * params
+ *	params
  * 		dest - the memory address to be copied to
  * 		src - the memory address to be copied from
  * 		n - number of bytes to copy from src to dest
  *
- * variables
+ *	variables
  * 		t_dest - char pointer casted copy of dest
  * 		t_src - char pointer casted copy of src
  *
- * function calls
+ *	function calls
  * 		ft_memcpy - when dest < src, we want it to copy as per usual
  *
- * return
+ *	return
  * 		the edited dest
  *
  */

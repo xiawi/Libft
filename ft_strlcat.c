@@ -13,22 +13,22 @@
 #include "libft.h"
 
 /*
- * ft_strlcat - size-bounded string copying and concatenation
+ *	ft_strlcat - size-bounded string copying and concatenation
  *
- * params
+ *	params
  * 		dst - the string buffer to be copied to
  * 		src - the string to be copied from
  * 		size - size of the buffer
  *
- * variables
+ *	variables
  * 		index - a number corresponding to the index of the dst array
  * 		dst_len - the length of dst
  * 		src_len - the length of src
  * 
- * function calls
+ *	function calls
  * 		ft_strlen - to get the size of src and dst
  *
- * return
+ *	return
  * 		the length of the string the function tried to create (sum of both
  * 		string lengths, or in the case where no NUL is found in size bytes, the
  * 		sum of size and src length).
