@@ -5,7 +5,7 @@
 - [X] ft_strdup
 - [X] ft_strlcat
 - [X] ft_strlcpy
-- [ ] ft_strchr
-- [ ] ft_strrchr
-- [ ] ft_strncmp
-- [ ] ft_memccpy
+- [X] ft_strchr
+- [X] ft_strrchr
+- [X] ft_strncmp
+- [X] ft_memccpy
