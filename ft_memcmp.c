@@ -15,7 +15,7 @@
 /*
  *	ft_memcmp - compare two memory areas
  *
- *	params
+ *	parameters
  * 		s1, s2 - the two areas to be compared
  *		n - the number of bytes to check for comparison
  *

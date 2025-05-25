@@ -22,10 +22,6 @@ $(NAME): $(SRC:.c=.o)
 	@ar rcs $@ $^
 	@echo "libft created."
 
-%.o: %.c
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@echo "${@} created."
-
 clean:
 	@rm -f $(SRC:.c=.o) $(BONUS:.c=.o)
 	@echo "object files deleted."
@@ -37,4 +33,4 @@ fclean: clean
 re: fclean all
 	@echo "successfully recreated libft."
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re

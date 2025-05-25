@@ -25,7 +25,7 @@
  * 		index - number corresponding to a character's index in big
  *
  *	function call
- * 		ft_strlen - gets lengths of big and little
+ * 		ft_strlen - gets lengths of little
  * 		ft_strncmp - to check if little is found in big
  *
  *	return
