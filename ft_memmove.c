@@ -13,44 +13,26 @@
 #include "libft.h"
 
 /*
- *	ft_memmove - copy memory area (safer than ft_memcpy)
+ *	ft_memmove - safer memcpy that deals with overlapping
  *
- *	params
- * 		dest - the memory address to be copied to
- * 		src - the memory address to be copied from
- * 		n - number of bytes to copy from src to dest
+ *	parameters
+ *		dest - the memory area to be copied to
+ *		src - the memory area to be copied from
+ *		n - number of bytes to copy
  *
- *	variables
- * 		t_dest - char pointer casted copy of dest
- * 		t_src - char pointer casted copy of src
- *
- *	function calls
- * 		ft_memcpy - when dest < src, we want it to copy as per usual
- *
- *	return
- * 		the edited dest
- *
+ *	notes
+ *		-	if address of dest is smaller than src, we use ft_memcpy, otherwise
+ *			copy src to dest backwards
+ *		-	n is decremented in line 34, this is important because the nth
+ *			byte of src and dest has an index of n - 1
  */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*t_dest;
-	const char	*t_src;
-
 	if (dest == src || n == 0)
 		return (dest);
 	if (dest < src)
-		ft_memcpy(dest, src, n);
-	else
-	{
-		t_dest = (char *) dest;
-		t_src = (char *) src;
-		t_dest += n - 1;
-		t_src += n - 1;
-		while (n)
-		{
-			*t_dest-- = *t_src--;
-			n--;
-		}
-	}
+		return (ft_memcpy(dest, src, n));
+	while (n--)
+		((unsigned char *)dest)[n] = ((unsigned char *)src)[n];
 	return (dest);
 }

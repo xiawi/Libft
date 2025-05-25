@@ -1,5 +1,5 @@
 CC=cc
-CFLAGS=-Wall -Wextra -Werror -c
+CFLAGS=-Wall -Wextra -Werror
 
 NAME=libft.a
 SRC=	ft_isalpha.c		ft_isdigit.c		ft_isalnum.c		ft_isascii.c		ft_isprint.c\
@@ -23,7 +23,7 @@ $(NAME): $(SRC:.c=.o)
 	@echo "libft created."
 
 %.o: %.c
-	@$(CC) $(CFLAGS) $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "${@} created."
 
 clean:

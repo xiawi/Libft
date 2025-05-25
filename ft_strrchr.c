@@ -15,28 +15,24 @@
 /*
  *	ft_strrchr - locate the last occurrence of character in string
  *
- *	params
+ *	parameters
  * 		s - the string to be searched
  * 		c - the character to be located
  *
  *	variables
- * 		index - a number corresponding to the index of a character in s
- * 		t_c - a char casted copy of c
+ * 		index - a number corresponding to the index of a character in `s`
  *
  *	return
- * 		address of the last occurrence of c in s if found, otherwise s'
- * 		terminating null byte.
+ * 		address of the last occurrence of `c` in `s` if found, otherwise NULL
  */
 char	*ft_strrchr(const char *s, int c)
 {
 	long	index;
-	char	t_c;
 
 	index = ft_strlen(s);
-	t_c = (char)c;
 	while (index >= 0)
 	{
-		if (s[index] == t_c)
+		if (s[index] == (char)c)
 			return ((char *)&s[index]);
 		index--;
 	}

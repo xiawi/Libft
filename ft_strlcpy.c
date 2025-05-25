@@ -15,13 +15,13 @@
 /*
  *	ft_strlcpy - size-bounded string copying
  *
- *	params
+ *	parameters
  * 		dst - the string buffer to be copied to
  * 		src - the string to be copied from
  * 		size - size of the buffer
  *
  *	variables
- * 		index - a number corresponding to the index of the dst and src arrays
+ * 		index - number corresponding to the index of the dst and src strings
  *
  *	function calls
  * 		ft_strlen - to get the length of src

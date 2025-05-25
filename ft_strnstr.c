@@ -15,7 +15,7 @@
 /*
  *	ft_strnstr - locate a substring in a string
  *
- *	params
+ *	parameters
  * 		big - the string to be searched
  * 		little - the substring to find
  * 		len - the length of characters to be searched

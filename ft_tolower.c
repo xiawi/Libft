@@ -15,7 +15,7 @@
 /*
  *	ft_tolower - convert character to lowercase
  *
- *	params
+ *	parameters
  * 		int	c - the unsigned char to be converted
  *
  *	return

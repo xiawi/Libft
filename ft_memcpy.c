@@ -6,7 +6,7 @@
 /*   By: weyap <weyap@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/19 11:33:19 by weyap             #+#    #+#             */
-/*   Updated: 2025/05/19 11:33:19 by weyap            ###   ########.fr       */
+/*   Updated: 2025/05/25 16:50:46 by weyap            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,34 +15,26 @@
 /*
  *	ft_memcpy - copy memory area
  *
- *	params
- * 		dest - the memory address to be copied to
- * 		src - the memory address to be copied from
- * 		n - number of bytes to copy from src to dest
+ *	parameters
+ *		dest - the memory area to be copied to
+ *		src - the memory area to be copied from
+ *		n - the number of bytes to copy
  *
  *	variables
- * 		t_dest - char pointer casted copy of dest
- * 		t_src - char pointer casted copy of src
- *
- *	return
- * 		the edited dest
+ *		index - number corresponding to the index of both `src` and `dest`.
  *
  *	notes
- * 		if dest and src address are the same, or if n = 0, simply return
- * 		dest.
- *		increments through n bytes of dest, copying the corresponding byte
- *		from src.
+ *		
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	char		*t_dest;
-	const char	*t_src;
+	size_t	index;
 
-	if (dest == src || n == 0)
-		return (dest);
-	t_dest = (char *) dest;
-	t_src = (const char *) src;
-	while (n--)
-		*t_dest++ = *t_src++;
+	index = 0;
+	while (index < n)
+	{
+		((unsigned char *)dest)[index] = ((unsigned char *)src)[index];
+		index++;
+	}
 	return (dest);
 }

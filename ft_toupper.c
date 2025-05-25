@@ -15,7 +15,7 @@
 /*
  *	ft_toupper - convert character to uppercase
  *
- *	params
+ *	parameters
  * 		int	c - the unsigned char to be converted
  *
  *	return

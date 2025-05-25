@@ -13,21 +13,17 @@
 #include "libft.h"
 
 /*
- *	ft_isprint - checks if an unsigned char passed is printable
+ *	ft_isprint - checks if a character passed in is printable
  *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is printable
- * 		0 - otherwise
+ *	parameters
+ *		c - the character to be checked
  *
- *	notes
- * 		ASCII code 0 - 31 and 127 are non-printable. 
+ *	return
+ *		returns a boolean value
+ *			1 - if `c` is printable
+ *			0 - otherwise
  */
 int	ft_isprint(int c)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	return (0);
+	return (c > 31 && c < 127);
 }

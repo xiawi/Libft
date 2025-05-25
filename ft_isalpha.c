@@ -13,18 +13,17 @@
 #include "libft.h"
 
 /*
- *	ft_isalpha - checks if an unsigned char passed in is an alphabetic character
+ *	ft_isalpha - checks if a character passed in is alphabetical
  *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is alphabetic
- * 		0 - otherwise
+ *	parameters
+ *		c - the character to be checked
+ *
+ *	return
+ *		returns a boolean value
+ *			1 - if `c` is alphabetical
+ *			0 - otherwise
  */
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }

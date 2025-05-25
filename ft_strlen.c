@@ -15,20 +15,18 @@
 /*
  *	ft_strlen - calculates the length of a string
  *
- *	params
- * 		s - the string that we want to calculate the length of
+ *	parameters
+ *		s - the string to calculate the length of
  *
  *	variables
- * 		len - the length calculated
+ *		len - the length of the string
  *
  *	return
- * 		len
+ *		the final `len`
  *
  *	notes
- * 		we iterate through string until we reach NULL (\0), incrementing len
- * 		at each iteration.
- *
- * 		if s is an empty string, it will not enter the while loop.
+ *		if `s` is an empty string, we won't even enter the while loop,
+ *		returning 0.
  */
 size_t	ft_strlen(const char *s)
 {

@@ -13,23 +13,17 @@
 #include "libft.h"
 
 /*
- *	ft_isalnum - checks if an unsigned char passed in is an alphanumeric 
- * 				 character
+ *	ft_isalnum - checks if a character passed in is alphanumeric
  *
- *	params
- * 		int	c - the unsigned char to be tested
+ *	parameters
+ *		c - the character to be checked
  *
- *	function calls
- * 		ft_isalpha - checks if c is alphabetical
- * 		ft_isdigit - checks if c is a digit
- * 
- *	returns
- * 		1 - if c is alphanumeric
- * 		0 - otherwise
+ *	return
+ *		returns a boolean value
+ *			1 - if `c` is alphanumeric
+ *			0 - otherwise
  */
 int	ft_isalnum(int c)
 {
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
+	return (ft_isalpha(c) || ft_isdigit(c));
 }

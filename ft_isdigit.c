@@ -13,18 +13,18 @@
 #include "libft.h"
 
 /*
- *	ft_isdigit - checks if an unsigned char passed in is a digit
+ *	ft_isdigit - checks if a character passed in is a digit
  *
- *	params
- * 		int	c - the unsigned char to be tested
- * 
- *	returns
- * 		1 - if c is a digit
- * 		0 - otherwise
+ *	parameters
+ *		c - the character to be checked
+ *
+ *	return
+ *		returns a boolean value
+ *			1 - if `c` is a digit
+ *			0 - otherwise
+ *		
  */
 int	ft_isdigit(int c)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	return (0);
+	return (c >= '0' && c <= '9');
 }
