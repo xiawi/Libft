@@ -12,50 +12,31 @@
 
 #include "libft.h"
 
-int	getlen(int n);
-int	ft_abs(int n);
-
 char	*ft_itoa(int n)
 {
-	char	*str;
+	char	str[12];
 	int		index;
+	long	t_n;
 
-	if (n == 0)
-		return (ft_strdup("0"));
-	index = getlen(n);
-	str = (char *)malloc(sizeof(char) * (index + 1));
-	if (str)
+	str[11] = '\0';
+	if (!n)
 	{
-		str[index--] = 0;
-		if (n < 0)
-			str[0] = '-';
-		while (n)
-		{
-			str[index--] = ft_abs(n % 10) + '0';
-			n /= 10;
-		}
+		str[10] = '0';
+		return (ft_strdup(&str[10]));
 	}
-	return (str);
-}
-
-int	getlen(int n)
-{
-	int	len;
-
-	len = 0;
-	if (n < 0)
-		len++;
-	while (n)
+	t_n = (long)n;
+	if (t_n < 0)
+		t_n *= -1;
+	index = 10;
+	while (t_n)
 	{
-		n /= 10;
-		len++;
+		str[index--] = t_n % 10 + '0';
+		t_n /= 10;
 	}
-	return (len);
-}
-
-int	ft_abs(int n)
-{
 	if (n < 0)
-		return (-n);
-	return (n);
+	{
+		str[index] = '-';
+		return (ft_strdup(&str[index]));
+	}
+	return (ft_strdup(&str[index + 1]));
 }

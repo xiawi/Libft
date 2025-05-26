@@ -24,7 +24,7 @@
  *
  *	return
  * 		if a difference is found, the difference between the two bytes in
- * 		memory, otherwise return 0.
+ * 		memory, otherwise 0.
  */
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

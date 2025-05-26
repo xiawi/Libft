@@ -15,7 +15,7 @@
 /*
  *	ft_substr - creates a substring from a string
  *
- *	params
+ *	parameters
  * 		s - the string from which the substring will be created
  * 		start - the start index of the substring in s
  * 		len - the maximum length of the substring
@@ -38,7 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_calloc(1, sizeof(char)));
-	else if (ft_strlen(&s[start]) > len)
+	if (ft_strlen(&s[start]) > len)
 		size = len + 1;
 	else
 		size = ft_strlen(&s[start]) + 1;

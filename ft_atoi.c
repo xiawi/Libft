@@ -15,12 +15,12 @@
 /*
  *	ft_atoi - convert a string to an integer
  *	
- *	params
+ *	parameters
  * 		nptr - the string to be converted
  *
  *	variables
  * 		mult - multiplier that can either be 1 or -1 (if there is a - sign)
- * 		val - the value of the integer
+ * 		val - the absolute value of the integer
  *
  *	function calls
  * 		ft_isdigit - check if a character is a digit
@@ -31,10 +31,10 @@
 int	ft_atoi(const char *nptr)
 {
 	char	mult;
-	int		val;
+	int		abs;
 
 	mult = 1;
-	val = 0;
+	abs = 0;
 	while ((*nptr >= 9 && *nptr <= 13) || *nptr == ' ')
 		nptr++;
 	if (*nptr == '+' || *nptr == '-')
@@ -45,8 +45,8 @@ int	ft_atoi(const char *nptr)
 	}
 	while (ft_isdigit(*nptr))
 	{
-		val = 10 * val + *nptr - '0';
+		abs = 10 * abs + *nptr - '0';
 		nptr++;
 	}
-	return (mult * val);
+	return (mult * abs);
 }

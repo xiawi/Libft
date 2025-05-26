@@ -15,30 +15,28 @@
 /*
  *	ft_strdup - duplicate a string
  *
- *	params
+ *	parameters
  * 		s - the string to duplicate
  *
  *	variables
- * 		index - number corresponding to a character's index in copy
+ * 		size - size of allocated memory
  * 		copy - the duplicated string
  *
  *	function calls
- * 		ft_strlen - calculates the length of s
+ * 		ft_strlen - calculates the length of `s`
+ * 		ft_strlcpy - copies `s` to `copy`
  *
  *	return
- * 		copy
+ * 		`copy`
  */
 char	*ft_strdup(const char *s)
 {
-	int		index;
+	int		size;
 	char	*copy;
 
-	index = 0;
-	copy = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!copy)
-		return (NULL);
-	while (*s)
-		copy[index++] = *s++;
-	copy[index] = 0;
+	size = ft_strlen(s) + 1;
+	copy = (char *)malloc(sizeof(char) * size);
+	if (copy)
+		ft_strlcpy(copy, s, size);
 	return (copy);
 }

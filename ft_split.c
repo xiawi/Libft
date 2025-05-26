@@ -12,24 +12,41 @@
 
 #include "libft.h"
 
-static int	countwords(char const *s, char c);
+static int	countdelimited(char const *s, char c);
 static int	delimitedlen(char const *s, char c);
 static void	*godfree(char **arr, int size);
 
+/*
+ *	ft_split - array of strings split by a delimiter from a string
+ *
+ *	parameters
+ *		s - the string to be split
+ *		c - the character delimiter
+ *
+ *	variables
+ *		delimited_count - number of delimited strings in `s`
+ *		arr - array of split strings
+ *		index - index of `arr`
+ *		str_len - length of a delimited string
+ *		delimited - delimited string
+ *
+ *	return
+ *		`arr` if no allocation fails, otherwise NULL
+ */
 char	**ft_split(char const *s, char c)
 {
-	int		word_count;
+	int		delimited_count;
 	char	**arr;
 	int		index;
 	int		str_len;
 	char	*delimited;
 
-	word_count = countwords(s, c);
-	arr = (char **)malloc(sizeof(char *) * (word_count + 1));
+	delimited_count = countdelimited(s, c);
+	arr = (char **)malloc(sizeof(char *) * (delimited_count + 1));
 	if (arr)
 	{
 		index = 0;
-		while (word_count--)
+		while (delimited_count--)
 		{
 			while (*s == c)
 				s++;
@@ -45,7 +62,20 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-static int	countwords(char const *s, char c)
+/*
+ *	countdelimited - counts number of delimited strings
+ *
+ *	parameters
+ *		s - string to count the number of delimited strings
+ *		c - the character delimiter
+ *
+ *	variables
+ *		count - number of delimited strings in `s`
+ *
+ *	return
+ *		`count`
+ */
+static int	countdelimited(char const *s, char c)
 {
 	int	count;
 
@@ -63,6 +93,16 @@ static int	countwords(char const *s, char c)
 	return (count);
 }
 
+/*
+ *	delimitedlen - calculates the length of a delimited string
+ *
+ *	parameters
+ *		
+ *
+ *	variables
+ *
+ *	return
+ */
 static int	delimitedlen(char const *s, char c)
 {
 	int	len;
@@ -76,6 +116,15 @@ static int	delimitedlen(char const *s, char c)
 	return (len);
 }
 
+/*
+ *	godfree - frees everything
+ *
+ *	parameters
+ *
+ *	variables
+ *
+ *	return
+ */
 static void	*godfree(char **arr, int size)
 {
 	int	index;
@@ -86,21 +135,3 @@ static void	*godfree(char **arr, int size)
 	free(arr);
 	return (NULL);
 }
-
-/*
-#include <stdio.h>
-
-int	main(void)
-{
-	int	index = 0;
-	char **split = ft_split("  tripouille  42  ", ' ');
-
-	while (split[index])
-	{
-		printf("%s\n", split[index]);
-		free(split[index]);
-		index++;
-	}
-	free(split);
-}
-*/

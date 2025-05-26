@@ -12,6 +12,26 @@
 
 #include "libft.h"
 
+/*
+ *	ft_strtrim - trims characters off the start and end of a string
+ *
+ *	parameters
+ *		s1 - the string to be edited
+ *		set - the character set to be trimmed off
+ *
+ *	variables
+ *		start - the start index of the substring
+ *		len - the length of the substring
+ *
+ *	function calls
+ *		ft_strchr - checks if a character is in the character set
+ *		ft_strlen - calculates the length of `s1`
+ *		ft_substr - creates the desired substring to return
+ *
+ *	return
+ *		a malloc'd copy of the string with characters trimmed off from start
+ *		and end
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int	start;

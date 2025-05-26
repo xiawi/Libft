@@ -21,7 +21,7 @@
  * 		len - the length of characters to be searched
  *
  *	variables
- * 		little_size - size of little
+ * 		little_len - length of little
  * 		index - number corresponding to a character's index in big
  *
  *	function call
@@ -34,16 +34,16 @@
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t	little_size;
+	size_t	little_len;
 	size_t	index;
 
-	little_size = ft_strlen(little);
+	little_len = ft_strlen(little);
 	index = 0;
 	if (!*little)
 		return ((char *)big);
-	while (index + little_size <= len && big[index])
+	while (index + little_len <= len && big[index])
 	{
-		if (!ft_strncmp(&big[index], little, little_size))
+		if (!ft_strncmp(&big[index], little, little_len))
 			return ((char *)&big[index]);
 		index++;
 	}

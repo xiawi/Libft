@@ -12,12 +12,10 @@
 
 #include "libft.h"
 
-static int	isoverflowing(size_t nmemb, size_t size);
-
 /*
  *	ft_calloc - allocate dynamic memory and fills it with 0
  *
- *	params
+ *	parameters
  * 		nmemb - number of elements to allocate memory to
  * 		size - the size of each element
  *
@@ -25,14 +23,11 @@ static int	isoverflowing(size_t nmemb, size_t size);
  * 		mem - the space in memory to return to caller
  *
  *	function calls
- * 		isoverflowing - to check whether nmemb * size causes overflow
  * 		ft_bzero - fills allocated memory with 0s
  *
  *	return
- * 		the allocated memory on success
- * 		if nmemb or size is 0, return a single byte of freeable memory to 
- * 		caller
- * 		otherwise, return NULL
+ *		a single byte of freeable memory if nmemb or size is 0, NULL if
+ *		memory allocation fails, otherwise the allocated memory
  */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -40,39 +35,10 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	if (nmemb * size == 0)
 		return (malloc(1));
-	if (isoverflowing(nmemb, size))
+	if ((nmemb * size) / nmemb != size)
 		return (NULL);
 	mem = (unsigned char *)malloc(nmemb * size);
 	if (mem)
 		ft_bzero(mem, nmemb * size);
 	return ((void *)mem);
-}
-
-/*
- *	isoverflowing - boolean function to check whether nmemb * size causes
- * 					overflow
- *
- *	params
- * 		nmemb - number of elements to allocate memory to
- * 		size - the size of an element
- *
- *	variables
- * 		prod - the product of size and nmemb, used to check for overflow
- *
- *	return
- * 		1 if overflow occurs
- * 		0 otherwise
- *
- *	notes
- * 		to check for overflow, we see if prod divided by nmemb is equal
- * 		to size
- */
-static int	isoverflowing(size_t nmemb, size_t size)
-{
-	size_t	prod;
-
-	prod = nmemb * size;
-	if (prod / nmemb != size)
-		return (1);
-	return (0);
 }
