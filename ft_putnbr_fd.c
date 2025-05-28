@@ -12,31 +12,47 @@
 
 #include "libft.h"
 
-static void	r_putnbr_fd(int n, int fd);
-
+/*
+ *	ft_putnbr_fd - writes a number to the given file descriptor
+ *
+ *	parameters
+ *		n - the number to be written
+ *		fd - the file descriptor to write to
+ *
+ *	variables
+ *		str - character buffer used to build the number as a string
+ *		index - number corresponding to the index of a character in `str`
+ *		t_n - long casted copy of `n`
+ *
+ *	function calls
+ *		ft_putstr_fd - writes the resulting string in the buffer 
+ *
+ *	notes
+ *		works entirely like ft_itoa, except instead of duplicating the string,
+ *		it is written to the given file descriptor
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
+	char	str[12];
+	int		index;
+	long	t_n;
+
+	str[11] = '\0';
 	if (!n)
 	{
-		ft_putchar_fd('0', fd);
-		return ;
+		str[10] = '0';
+		ft_putstr_fd(&str[10], fd);
 	}
-	r_putnbr_fd(n, fd);
-}
-
-static void	r_putnbr_fd(int n, int fd)
-{
-	if (n == 0)
-		return ;
-	else if (n < 0)
+	t_n = (long)n;
+	if (t_n < 0)
+		t_n *= -1;
+	index = 10;
+	while (t_n)
 	{
-		ft_putchar_fd('-', fd);
-		r_putnbr_fd(n / -10, fd);
-		ft_putchar_fd(-(n % 10) + '0', fd);
+		str[index--] = t_n % 10 + '0';
+		t_n /= 10;
 	}
-	else
-	{
-		r_putnbr_fd(n / 10, fd);
-		ft_putchar_fd((n % 10) + '0', fd);
-	}
+	if (n < 0)
+		str[index--] = '-';
+	return (ft_putstr_fd(&str[index + 1], fd));
 }

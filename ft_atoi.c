@@ -20,7 +20,7 @@
  *
  *	variables
  * 		mult - multiplier that can either be 1 or -1 (if there is a - sign)
- * 		val - the absolute value of the integer
+ * 		abs - the absolute value of the integer
  *
  *	function calls
  * 		ft_isdigit - check if a character is a digit

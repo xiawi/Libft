@@ -20,7 +20,7 @@
  *		n - the number of bytes to check for comparison
  *
  *	variables
- * 		t_s1, t_s2 - the unsigned char pointer casted copies of s1 and s2
+ * 		t_s1, t_s2 - the unsigned char pointer casted copies of `s1` and `s2`
  *
  *	return
  * 		if a difference is found, the difference between the two bytes in

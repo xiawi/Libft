@@ -12,6 +12,31 @@
 
 #include "libft.h"
 
+/*
+ *	ft_strmapi - duplicates a string and applies a function to each character
+ *				 in the string
+ *
+ *	parameters
+ *		s - string to be duplicated
+ *		f - function to be applied to each character in `s`
+ *
+ *	variables
+ *		str - dynamically allocated copy of `s`
+ *		index - index corresponding to a character in `str`, passed as an
+ *				argument for `f`
+ *
+ *	function calls
+ *		ft_strdup - duplicates `s`
+ *
+ *	return
+ *		`str`
+ *
+ *	notes
+ *		[45-46]
+ *			if `s` is NULL, return NULL
+ *		[47-48]
+ *			if `f` is NULL, we simply return an unedited duplicate of `s`
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*str;

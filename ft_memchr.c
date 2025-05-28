@@ -24,8 +24,7 @@
  * 		t_s - the unsigned char pointer casted copy of `s`
  *
  *	return
- *		address of first occurrence of `c` if found, otherwise NULL.
- *
+ *		address of first occurrence of `c` if found, otherwise NULL
  */
 void	*ft_memchr(const void *s, int c, size_t n)
 {

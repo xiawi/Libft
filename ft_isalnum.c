@@ -18,6 +18,10 @@
  *	parameters
  *		c - the character to be checked
  *
+ *	function calls
+ *		ft_isalpha - to check if `c` is alphabetical
+ *		ft_isidgit - to check if `c` is a digit
+ *
  *	return
  *		returns a boolean value
  *			1 - if `c` is alphanumeric

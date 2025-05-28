@@ -21,15 +21,15 @@
  * 		len - the length of characters to be searched
  *
  *	variables
- * 		little_len - length of little
- * 		index - number corresponding to a character's index in big
+ * 		little_len - length of `little`
+ * 		index - number corresponding to a character's index in `big`
  *
  *	function call
- * 		ft_strlen - gets lengths of little
- * 		ft_strncmp - to check if little is found in big
+ * 		ft_strlen - gets length of `little`
+ * 		ft_strncmp - to check if `little` is found in `big`
  *
  *	return
- * 		a pointer to the first occurrence of little in big if available,
+ * 		a pointer to the first occurrence of `little` in `big` if available,
  * 		otherwise return NULL.
  */
 char	*ft_strnstr(const char *big, const char *little, size_t len)

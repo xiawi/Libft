@@ -24,6 +24,7 @@
  *
  *	function calls
  * 		ft_strlen - calculates the length of `s`
+ *		malloc - allocates space from the heap
  * 		ft_strlcpy - copies `s` to `copy`
  *
  *	return

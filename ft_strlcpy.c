@@ -33,7 +33,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	index;
 
-	if (size > 0)
+	if (size)
 	{
 		index = 0;
 		while (index < size - 1 && src[index])

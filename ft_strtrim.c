@@ -24,13 +24,20 @@
  *		len - the length of the substring
  *
  *	function calls
- *		ft_strchr - checks if a character is in the character set
+ *		ft_strdup - duplicates `s1` if NULL is passed in as `set`
+ *		ft_strchr - checks if a character is in `set`
  *		ft_strlen - calculates the length of `s1`
  *		ft_substr - creates the desired substring to return
  *
  *	return
- *		a malloc'd copy of the string with characters trimmed off from start
+ *		a freeable copy of the string with characters trimmed off from start
  *		and end
+ *
+ *	notes
+ *		[47-48]
+ *			if `s1` is NULL, we just return NULL
+ *		[49-50]
+ *			if `set` is NULL, we simply return a freeable copy of `s1`
  */
 char	*ft_strtrim(char const *s1, char const *set)
 {

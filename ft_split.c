@@ -17,18 +17,25 @@ static int	delimitedlen(char const *s, char c);
 static void	*godfree(char **arr, int size);
 
 /*
- *	ft_split - array of strings split by a delimiter from a string
+ *	ft_split - splits a string into an array of strings using a delimiter
  *
  *	parameters
- *		s - the string to be split
- *		c - the character delimiter
+ *		s - string to be split
+ *		c - character delimiter
  *
  *	variables
- *		delimited_count - number of delimited strings in `s`
- *		arr - array of split strings
- *		index - index of `arr`
- *		str_len - length of a delimited string
- *		delimited - delimited string
+ *	 	delimited_count - number of substrings between delimiters
+ *		arr - dynamically allocated array of split strings
+ *		index - current index to insert into `arr`
+ *		str_len - length of the current substring
+ *		delimited - temporary pointer to the current substring
+ *
+ *	function calls
+ *		countdelimited - counts how many substrings exist
+ *		malloc - allocates memory from the heap
+ *		delimitedlen - gets the length of the current substring
+ *		ft_substr - duplicates a substring
+ *		godfree - frees memory in case of error
  *
  *	return
  *		`arr` if no allocation fails, otherwise NULL
@@ -53,7 +60,7 @@ char	**ft_split(char const *s, char c)
 			str_len = delimitedlen(s, c);
 			delimited = ft_substr(s, 0, str_len);
 			if (!delimited)
-				return (godfree(arr, index + 1));
+				return (godfree(arr, index));
 			arr[index++] = delimited;
 			s += str_len;
 		}
@@ -67,7 +74,7 @@ char	**ft_split(char const *s, char c)
  *
  *	parameters
  *		s - string to count the number of delimited strings
- *		c - the character delimiter
+ *		c - character delimiter
  *
  *	variables
  *		count - number of delimited strings in `s`
@@ -94,14 +101,17 @@ static int	countdelimited(char const *s, char c)
 }
 
 /*
- *	delimitedlen - calculates the length of a delimited string
+ *	delimitedlen - calculates the length of the first delimited string
  *
  *	parameters
- *		
+ * 		s - string to calculate the length of the first delimited string
+ * 		c - character delimiter
  *
  *	variables
+ *		len - length of delimited string
  *
  *	return
+ *		`len`
  */
 static int	delimitedlen(char const *s, char c)
 {
@@ -120,10 +130,19 @@ static int	delimitedlen(char const *s, char c)
  *	godfree - frees everything
  *
  *	parameters
+ *		arr - the array to be freed
+ *		size - the number of contents to be freed from `arr`
  *
  *	variables
+ *		index - `arr` index
  *
  *	return
+ *		NULL
+ *
+ *	notes
+ *		[145-147]
+ *			loops through `arr` up to the `size`th element, freeing each
+ *			element before freeing `arr` itself
  */
 static void	*godfree(char **arr, int size)
 {

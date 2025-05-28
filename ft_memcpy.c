@@ -22,9 +22,6 @@
  *
  *	variables
  *		index - number corresponding to the index of both `src` and `dest`.
- *
- *	notes
- *		
  */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -22,19 +22,21 @@
  *	variables
  * 		index - a number corresponding to the index of a character in `s`
  *
+ * 	function calls
+ * 		ft_strlen - to calculates the length of `s`
+ *
  *	return
  * 		address of the last occurrence of `c` in `s` if found, otherwise NULL
  */
 char	*ft_strrchr(const char *s, int c)
 {
-	long	index;
+	size_t	index;
 
 	index = ft_strlen(s);
-	while (index >= 0)
-	{
+	if (!c)
+		return ((char *)&s[index]);
+	while (index--)
 		if (s[index] == (char)c)
 			return ((char *)&s[index]);
-		index--;
-	}
 	return (NULL);
 }

@@ -21,12 +21,12 @@
  * 		size - size of the buffer
  *
  *	variables
- * 		index - a number corresponding to the index of the `dst` array
  * 		dst_len - the length of `dst`
  * 		src_len - the length of `src`
  * 
  *	function calls
  * 		ft_strlen - to get the size of src and dst
+ * 		ft_strlcpy - to copy remaining `size` bytes from `src` to `dst`
  *
  *	return
  * 		the length of the string the function tried to create (sum of both
@@ -35,22 +35,16 @@
  */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	index;
 	size_t	dst_len;
 	size_t	src_len;
 
-	index = 0;
 	dst_len = 0;
 	src_len = ft_strlen(src);
 	while (dst_len < size && dst[dst_len])
 		dst_len++;
 	if (dst_len == size)
 		return (size + src_len);
-	while (src[index] && dst_len + index < size - 1)
-	{
-		dst[dst_len + index] = src[index];
-		index++;
-	}
-	dst[dst_len + index] = 0;
+	size -= dst_len;
+	ft_strlcpy(&dst[dst_len], src, size);
 	return (dst_len + src_len);
 }

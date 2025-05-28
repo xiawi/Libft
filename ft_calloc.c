@@ -13,7 +13,7 @@
 #include "libft.h"
 
 /*
- *	ft_calloc - allocate dynamic memory and fills it with 0
+ *	ft_calloc - allocates dynamic memory and fills it with 0
  *
  *	parameters
  * 		nmemb - number of elements to allocate memory to
@@ -23,10 +23,11 @@
  * 		mem - the space in memory to return to caller
  *
  *	function calls
- * 		ft_bzero - fills allocated memory with 0s
+ *		malloc - allocates space from the heap
+ * 		ft_bzero - fills allocated memory with zeros
  *
  *	return
- *		a single byte of freeable memory if nmemb or size is 0, NULL if
+ *		a single byte of freeable memory if `nmemb` or `size` is 0, NULL if
  *		memory allocation fails, otherwise the allocated memory
  */
 void	*ft_calloc(size_t nmemb, size_t size)

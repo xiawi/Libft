@@ -22,7 +22,6 @@
  *		returns a boolean value
  *			1 - if `c` is a digit
  *			0 - otherwise
- *		
  */
 int	ft_isdigit(int c)
 {

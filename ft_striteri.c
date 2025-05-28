@@ -12,6 +12,22 @@
 
 #include "libft.h"
 
+/*
+ *	ft_striteri - applies a function on each character of a string
+ *
+ *	parameters
+ *		s - string to be modified
+ *		f - function to be applied to all characters in `s`
+ *
+ *	variables
+ *		index - index corresponding to a character in `s`, used as an argument
+ *				in f
+ *
+ *	notes
+ *		[34-35]
+ *			if either s or f are NULL, nothing is done and the function returns
+ *			early
+ */
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	index;

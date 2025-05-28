@@ -22,12 +22,28 @@
  *
  *	variables
  * 		substr - the substring
+ * 		size - size of allocated memory space
+ *
+ *	function calls
+ *		ft_strlen -	to calculate the lengths of `s` from its starting index, as
+ *					well as from index `start`
+ *		ft_calloc -	to return an empty string if `start` is greater than the
+ *					length of s
+ * 		malloc - allocates space from the heap
+ *		ft_strlcpy - copies `size` characters from `s` at index `start` to
+ *					 `substr`
  *
  *	return
- *		returns substring on success, otherwise return NULL.
+ *		returns `substr` on success, otherwise return NULL.
  *
  *	notes
- * 		
+ * 		[55-56]
+ * 			if `start` is greater than the length of `s`, we simply return a
+ * 			freeable empty string
+ *		[57-60]
+ * 			if length goes beyond the bounds of the string, we allocate only
+ * 			the length of the string from index `start` + 1 (for the NUL
+ * 			terminator), otherwise len + 1
  */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

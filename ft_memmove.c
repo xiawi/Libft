@@ -21,9 +21,14 @@
  *		n - number of bytes to copy
  *
  *	notes
- *		-	if address of dest is smaller than src, we use ft_memcpy, otherwise
+ *		[36-37]
+ *			if dest and src share the same address, or if n is 0, we simply
+ *			return dest without changing anything
+ *		[38-41]
+ *			if address of dest is smaller than src, we use ft_memcpy, otherwise
  *			copy src to dest backwards
- *		-	n is decremented in line 34, this is important because the nth
+ *		[40]
+ *			n is decremented in line 34, this is important because the nth
  *			byte of src and dest has an index of n - 1
  */
 void	*ft_memmove(void *dest, const void *src, size_t n)

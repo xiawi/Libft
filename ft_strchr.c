@@ -23,6 +23,9 @@
  * 		index - the number corresponding to an index in `s`
  * 		s_len - length of `s`
  *
+ *	function calls
+ *		ft_strlen - to calculate the length of `s`
+ *
  *	return
  * 		address of the first occurrence of `c` in `s` if found, otherwise `s`'
  * 		terminating null byte.
@@ -34,7 +37,9 @@ char	*ft_strchr(const char *s, int c)
 
 	index = 0;
 	s_len = ft_strlen(s);
-	while (index <= s_len)
+	if (!c)
+		return ((char *)&s[s_len]);
+	while (index < s_len)
 	{
 		if (s[index] == (char)c)
 			return ((char *)&s[index]);

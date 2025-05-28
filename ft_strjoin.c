@@ -24,11 +24,19 @@
  *
  *	function calls
  *		ft_strlen - gets length of both `s1` and `s2`
+ * 		malloc - allocates space from the heap
  *		ft_strlcpy - copies `s1` to `str`
  *		ft_strlcat - concatenates `s2` to `str`
  *
  *	return
  *		the joined string during allocation success, otherwise NULL
+ *
+ *	notes
+ *		[46-47]
+ *			if both s1 and s2 ceases to exist, we simply return NULL
+ *		[48-51]
+ *			if only one of them don't exist, we just return a duplicate of the 
+ *			other
  */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
