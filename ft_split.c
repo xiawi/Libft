@@ -136,6 +136,9 @@ static int	delimitedlen(char const *s, char c)
  *	variables
  *		index - `arr` index
  *
+ *	function calls
+ *		free - frees dynamically allocated memory back to the heap
+ *
  *	return
  *		NULL
  *

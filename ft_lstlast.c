@@ -12,6 +12,15 @@
 
 #include "libft.h"
 
+/*
+ *	ft_lstlast - returns the last node of the list
+ *
+ *	parameters
+ *		lst - the beginning of the list
+ *
+ *	return
+ *		last node of the `lst`
+ */
 t_list	*ft_lstlast(t_list *lst)
 {
 	if (lst)

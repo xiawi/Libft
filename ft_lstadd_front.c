@@ -12,6 +12,17 @@
 
 #include "libft.h"
 
+/*
+ *	ft_lstadd_front - prepends a node to the front of the list
+ *
+ *	parameters
+ *		lst - the list to prepend to
+ *		new - the node to prepend to `lst`
+ *
+ *	notes
+ *		[31]
+ *			it is important that head of `lst` is updated to `new`
+ */
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (new)

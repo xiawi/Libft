@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+/*
+ *	ft_lstnew - creates a new linked list node
+ *
+ *	parameters
+ *		content - the content to place in the node
+ *
+ *	variables
+ *		node - the node to return
+ *
+ *	function calls
+ *		malloc - allocates memory from the heap
+ *
+ *	return
+ *		`node`
+ */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*node;

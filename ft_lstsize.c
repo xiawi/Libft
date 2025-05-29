@@ -12,6 +12,18 @@
 
 #include "libft.h"
 
+/*
+ *	ft_lstsize - calculates the size of a linked list
+ *
+ *	parameters
+ *		lst - the list to calculate the size of
+ *
+ *	variables
+ *		size - the size of `lst`
+ *
+ *	return
+ *		`size`
+ */
 int	ft_lstsize(t_list *lst)
 {
 	int	size;
