@@ -1,1 +1,0 @@
-- [ ] optimize ft_split.c
