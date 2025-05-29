@@ -12,6 +12,16 @@
 
 #include "libft.h"
 
+/*
+ *	ft_lstadd_back - adds a node to the back of a linked list
+ *
+ *	parameters
+ *		lst - the list to be appended to
+ *		new - the new node to be appended to `lst`
+ *
+ *	variables
+ *		last - the last node of the list
+ */
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;

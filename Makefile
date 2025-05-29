@@ -2,6 +2,7 @@ CC=cc
 CFLAGS=-Wall -Wextra -Werror
 
 NAME=libft.a
+INC=libft.h
 SRC=	ft_isalpha.c		ft_isdigit.c		ft_isalnum.c		ft_isascii.c		ft_isprint.c\
 		ft_strlen.c			ft_memset.c			ft_bzero.c			ft_memcpy.c			ft_memmove.c\
 		ft_strlcpy.c		ft_strlcat.c		ft_toupper.c		ft_tolower.c		ft_strchr.c\
@@ -18,7 +19,7 @@ bonus: $(BONUS:.c=.o)
 	@ar rcs $(NAME) $^
 	@echo "bonus functions added to libft."
 
-$(NAME): $(SRC:.c=.o)
+$(NAME): $(SRC:.c=.o) $(INC)
 	@ar rcs $@ $^
 	@echo "libft created."
 
@@ -31,6 +32,9 @@ fclean: clean
 	@echo "libft deleted."
 
 re: fclean all
-	@echo "successfully recreated libft."
+
+%.o: %.c
+	@echo "compiling $@..."
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 .PHONY: all bonus clean fclean re

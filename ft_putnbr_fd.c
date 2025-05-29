@@ -41,7 +41,7 @@ void	ft_putnbr_fd(int n, int fd)
 	if (!n)
 	{
 		str[10] = '0';
-		ft_putstr_fd(&str[10], fd);
+		return (ft_putstr_fd(&str[10], fd));
 	}
 	t_n = (long)n;
 	if (t_n < 0)
