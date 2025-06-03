@@ -43,21 +43,22 @@ OBJ		=	$(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(INC)
-	@ar rcs $@ $^
-	@echo "libft created."
+	ar rcs $@ $^
+	echo "libft created."
 
 clean:
-	@rm -f $(OBJ)
-	@echo "object files deleted."
+	rm -f $(OBJ)
+	echo "object files deleted."
 
 fclean: clean
-	@rm -f $(NAME)
-	@echo "libft deleted."
+	rm -f $(NAME)
+	echo "libft deleted."
 
 re: fclean all
 
 %.o: %.c
-	@echo "compiling $@..."
-	@$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
+	echo "compiling $@..."
+	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
 
 .PHONY: all clean fclean re
+.SILENT:
