@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 /*
  *	ft_putchar_fd - writes a single character to a given file descriptor

@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 /*
  *	ft_putendl_fd - writes a string followed by a new line to the given file 

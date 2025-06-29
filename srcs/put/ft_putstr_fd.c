@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 /*
  *	ft_putstr_fd - writes a string to the given file descriptor
