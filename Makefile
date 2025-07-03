@@ -1,7 +1,8 @@
 CC		=	cc
 CFLAGS	=	-Wall -Wextra -Werror
 
-NAME	=	libft.a
+LIBDIR	=	lib
+NAME	=	$(LIBDIR)/libft.a
 
 INCDIR	=	includes
 INC		=	$(INCDIR)/libft.h
