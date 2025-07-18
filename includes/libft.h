@@ -12,7 +12,7 @@
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdlib.h>
+# include <stddef.h>
 
 // Part 1
 int		ft_isalpha(int c);

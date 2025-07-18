@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	countdelimited(char const *s, char c);
 static int	delimitedlen(char const *s, char c);
